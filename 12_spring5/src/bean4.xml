@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"
+>
+<!--    &lt;!&ndash;通过增加util空间完成集合的提取和注入&ndash;&gt;-->
+<!--    <util:list id="courseList">-->
+<!--        <value>-->
+<!--            java-->
+<!--        </value>-->
+<!--        <value>c++</value>-->
+<!--        <value>PHP</value>-->
+<!--    </util:list>-->
+
+<!--    <bean id="stu" class="com.spring01.bean.Stu">-->
+<!--        <property name="courses" ref="courseList"></property>-->
+<!--    </bean>-->
+
+    <!--测试bean的生命周期 添加上初始化方法和销毁时候的方法    -->
+    <bean id="myBean" class="com.spring01.bean.MyBean" init-method="initMethod" destroy-method="destroyMethod">
+        <property name="beanName" value="类名"></property>
+    </bean>
+
+    <!--    配置后置处理器,对该配置文件的所有bean都生效-->
+    <bean id="myBeanPost" class="com.spring01.bean.MyBeanPost"></bean>
+</beans>

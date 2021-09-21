@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onclick()事件的使用</title>
+    <script type="text/javascript">
+      function onlickfun() {
+        alert("onclick()事件被静态调用");
+      }
+      //在设置除了onload之外的事件的时候，因为要获取页面的id，所以要先通过window.onload() = function(){}获取初始化页面的内容
+      window.onload = function () {
+        document.getElementById("but2").onclick = function(){
+          alert("onclick()事件被动态调用");
+        }
+      }
+    </script>
+</head>
+<body>
+      <button onclick="onlickfun()">按钮1</button>
+      <button id="but2">按钮2</button>
+</body>
+</html>

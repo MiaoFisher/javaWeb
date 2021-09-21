@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+    /**
+     * 全选
+     * 先根据getrElementsByName获取相同name的标签属性集
+     * 然后遍历将每一个标签的checked值改为true
+     */
+    function checkall(){
+      var hobbies = document.getElementsByName("hobby");
+      for (var i = 0 ; i<hobbies.length;i++){
+        hobbies[i].checked = true;
+      }
+    }
+    /*
+    全不选
+     */
+    function notcheckall(){
+      var hobbies = document.getElementsByName("hobby");
+      for (var i = 0 ; i<hobbies.length;i++){
+        hobbies[i].checked = false;
+      }
+    }
+    function checkReserve(){
+      var hobbies = document.getElementsByName("hobby");
+      for (var i = 0 ; i<hobbies.length;i++){
+        hobbies[i].checked = !hobbies[i].checked;
+      }
+    }
+
+    /**
+     * 根据标签名来获取用户对象集合
+     * getElementsTagByName
+     */
+    function checkAllByTag(){
+      var input = document.getElementsByTagName("input");
+      for (var i = 0;i<input.length;i++){
+        input[i].checked = true;
+      }
+    }
+  </script>
+</head>
+<body>兴趣爱好:
+      <input type="checkbox" name="hobby" value="cpp"/>c++
+      <input type="checkbox" name="hobby" value="php">PHP
+      <input type="checkbox" name="hobby" value="java">JAVA
+      <button onclick="checkAllByTag()">全选</button>
+      <button onclick="notcheckall()">全不选</button>
+      <button onclick="checkReserve()">反选</button>
+
+</body>
+</html>

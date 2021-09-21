@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onload()事件的使用</title>
+  <script type="text/javascript">
+    // 第二种动态调用的方法
+    function f() {
+      alert("f()")
+    }
+    window.onload = function () {
+      alert("onLoad被动态调用");
+      f();
+    }
+  </script>
+</head>
+<!--第一种方法直接在Body中插入 <body onload="alert('静态Onload事件相应')">-->
+<body >
+
+</body>
+</html>

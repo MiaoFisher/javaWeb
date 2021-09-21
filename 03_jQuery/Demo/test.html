@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            // alert( $("input[name!='newsletter']").length );
+            // alert( $("div").has("span").length );
+            // $("div:first").nextUntil("span").addClass("after");
+            // alert($("div").add("span").length)
+            $("#seled").val(["cn","usa"])
+        });
+
+    </script>
+</head>
+<body>
+    <div></div>
+    <span></span>
+    <div></div>
+    <div></div>
+    <div></div>
+    <select id="seled" multiple="multiple">
+        <option value="cn">中国</option>
+        <option value="usa">美国</option>
+        <option value="jsp">日本</option>
+    </select>
+</body>
+</html>

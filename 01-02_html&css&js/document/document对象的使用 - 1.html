@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单提交的验证</title>
+  <script type="text/javascript">
+    window.onload = function () {
+      var userName = document.getElementById("username");
+      TestName = userName.value;
+
+    }
+    function onSubmitfun() {
+      var username = document.getElementById("username");//通过id获得对象
+      var TestName = username.value;//获得用户的value
+      var patt = /^\w{5,12}$/;//通过正则表达式 规范用户的输入格式
+      if (patt.test(TestName)){
+        alert("正确")
+      }else{
+        alert("错误")
+      }
+    }
+  </script>
+</head>
+<body>
+      <form onsubmit="onSubmitfun()">
+        用户名:<input type="text" id="username" value="name">
+        <input type="submit">
+      </form>
+</body>
+</html>

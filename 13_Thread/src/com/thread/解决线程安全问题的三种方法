@@ -1,0 +1,6 @@
+1.synchronized同步
+    1.实现接口Runnable的时候在run()方法中将需要同步的代码增加同步synchronized
+    2.继承Thread类的时候在run()方法中将需要同步的代码增加synchronized
+2.加lock锁
+    在需要需要同步的代码前面增加lock.lock()
+    在释放资源的时候释放锁lock.unlock()

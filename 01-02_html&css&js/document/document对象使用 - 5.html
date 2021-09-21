@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用document创建对象</title>
+  <script type="text/javascript">
+
+    window.onload = function () {
+      //通过createElement创建对象
+      var divOBJ = document.createElement("div");
+      //将创建的对象赋值
+      divOBJ.innerHTML = "divObj对象被创建";
+      //通过document.body.appendChild()将对象创建
+      document.body.appendChild(divOBJ);
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>

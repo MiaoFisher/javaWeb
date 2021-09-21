@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通过正则表达式进行校验</title>
+  <script>
+    function formSubmit() {
+      var username = document.getElementById("username");
+      var testName = username.value;
+      var patt = /^\w{5,12}$/;
+      var usernameSpanObj = document.getElementById("spanObj");
+      //alert(usernameSpanObj);
+      if (patt.test(testName)){
+        usernameSpanObj.innerHTML = "<img src=\"../1.jpg\" width=\"20\" height=\"20\">";
+      }else{
+        usernameSpanObj.innerHTML = " <img src=\"../3.jpg\" width=\"20\" height=\"20\">";
+      }
+    }
+  </script>
+</head>
+<body>
+
+        姓名:<input type="text" id="username"/>
+        <span id="spanObj"></span>
+        <button onclick="formSubmit()">校验</button>
+
+
+</body>
+</html>

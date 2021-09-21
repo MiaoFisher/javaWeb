@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      html1
+<!--        表单的基本知识-->
+    <form>
+        姓名:<input type="text" value="输入您的姓名"/><br/>
+        密码:<input type="password"/><br/>
+        确认密码:<input type="password"/><br/>
+        性别:<input type="radio" checked="checked" name="sex"/>男<input type="radio" name="sex"/>女 <br>
+        兴趣爱好:<input type="checkbox" checked="checked" name="ab">C语言
+        <input type="checkbox" checked="checked" name="ab">PHP
+        <input type="checkbox" name="ab">GO语言<br/>
+        国籍:
+        <select>
+            <option>中国</option>
+            <option selected="selected">美国</option>
+            <option>小日本</option>
+        </select><br/>
+        自我介绍:<br/>
+        <textarea rows="10" cols="20">请做一个简单的自我介绍~</textarea>
+        <br/>
+        <input type="reset" value="重置">
+        <input type="submit" value="提交">
+        <input type="button" value="按钮">
+        <input type="file" value="文件">
+        <input type="hidden" value="隐藏域">
+    </form>
+
+<!--为了让页面更加工整，一般配合表格使用-->
+<!--      表单提交
+          method:提交的浏览器位置
+          action:提交方式，一般为:get/post
+          需要注意:
+          1.每个属性都要在form内
+          2.每个属性都要有name
+          3.option checkbox radio中的value才是提交的内容
+-->
+    <form action="http://localhost:8080" method="get">
+        <h3 align="center">修改后的表单</h3>
+        <table>
+            <tr>
+                <td>
+                    <input type="hidden" name="action" value="get">
+                </td>
+            </tr>
+            <tr>
+                <td>姓名:</td>
+                <td><input type="text" value="输入您的姓名" name="sex"/></td>
+            </tr>
+            <tr>
+                <td>密码:</td>
+                <td><input type="password" name="password"/></td>
+            </tr>
+            <tr>
+                <td>确认密码:</td>
+                <td><input type="password" name="repassword"/></td>
+            </tr>
+            <tr>
+                <td> 性别:</td>
+                <td><input type="radio" checked="checked" name="sex" value="boy">男
+                <input type="radio" name="sex" value="girl">女</td>
+            </tr>
+            <tr>
+                <td>兴趣爱好:</td>
+                <td><input type="checkbox" name="ha" checked="checked" value="C++">C++
+                <input type="checkbox" name="ha" value="PHP">PHP
+                <input type="checkbox" name="ha" value="GO">GO</td>
+            </tr>
+            <tr>
+                <td>国籍:</td>
+                <td>
+                    <select name="country">
+                    <option selected="selected" value="china" >中国</option>
+                    <option value="usa" name="country">美国</option>
+                    <option value="jp">日本</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>自我介绍:</td>
+                <td>
+                    <textarea rows="10" cols="20" name="self">自我介绍</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="reset" value="重置"></td>
+                <td><input type="submit" value="提交" align="right"></td>
+
+                <td></td>
+            </tr>
+            <tr>
+                <td><td><input type="file"></td></td>
+
+            </tr>
+            <tr>
+                <td><input type="hidden"></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

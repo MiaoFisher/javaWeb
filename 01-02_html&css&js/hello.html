@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+</head>
+<!--bgvolor是背景颜色--
+onclick是点击事件
+alert()是Javascript提供的警告框函数，可以接受任意函数
+-->
+<body  bgcolor="#ffebcd">
+    你好宝宝<br>
+    <hr/>
+    <a href="hello1.html">百度</a>
+    <button onclick="alert('好耶')">好帅</button>
+    <font color="#7fff00" size="7" face="宋体">学习html第一天</font>
+    <ul>
+        <li><a href="http://baidu.com" target="_self" >百度</a> </li>
+        <li><a href="http://jingdong.com" target="_parent">&lt;京东&gt;</a> </li>
+    </ul>
+<!--     .表示当前所在的文件夹,当为./的时候可以忽略-->
+<!--     ..表示当前所在文件夹的上一级文件夹-->
+    <img src="1.jpg" width="100" height="100" alt="花1">
+    <img src="1.jpg" width="100" height="100" alt="花1">
+    <img src="../2.jpg" width="100" height="100" alt="花2">
+    <img src="3.jpg" width="100" height="100" alt="花3">
+
+<!--设置表格-->
+<!--    tr是行标签-->
+<!--    td是每一行的每一个块标签-->
+<!--    th是表头标签-->
+<!--    cellspacing是单元格之间的距离-->
+    <table align="center" border="1" cellspacing="5">
+        <tr>
+            <th>表头1.1</th>
+            <th>表头1.2</th>
+            <th>表头1.3</th>
+        </tr>
+        <tr>
+            <td>2.1</td>
+            <td>2.2</td>
+            <td>2.3</td>
+        </tr>
+    </table>
+<!--跨行跨列标签-->
+<!--colspan是跨列标签-->
+<!--rowspan是跨行标签-->
+<table align="center" border="1" cellspacing="0">
+    <tr>
+        <td colspan="2">1.1</td>
+        <td>1.2</td>
+        <td>1.3</td>
+        <td>1.4</td>
+    </tr>
+    <tr>
+        <td rowspan="2">2.1</td>
+        <td>2.2</td>
+        <td>2.3</td>
+        <td>2.4</td>
+        <td>2.5</td>
+    </tr>
+    <tr>
+        <td>3.1</td>
+        <td>3.2</td>
+        <td>3.3</td>
+        <td>2.4</td>
+    </tr>
+    <tr>
+        <td colspan="2" rowspan="2">4.1</td>
+        <td>4.2</td>
+        <td>4.3</td>
+        <td>4.4</td>
+    </tr>
+    <tr>
+        <td>5.1</td>
+        <td>5.2</td>
+        <td>5.3</td>
+
+    </tr>
+
+</table>
+    <!--    iframe框架的使用-->
+    <!-- 使用iframe 配合 a标签 可以 在网页内打开指定的网页，但是要记得给iframe 的 name 属性命名 ,a 中的 target 写上 iframe的name-->
+    <iframe width="200" height="200" name="iframe1">
+    </iframe>
+    <ul>
+        <li><a href="html1.html" target="iframe1">html1</a> </li>
+        <li><a href="html2.html" target="iframe1">html2</a> </li>
+        <li><a href="html3.html" target="iframe1">html3</a> </li>
+    </ul>
+
+</body>
+
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onblur事件的使用</title>
+  <script type="text/javascript">
+    function onblurfun(){
+      console.log("静态调用onblur()");
+    }
+    window.onload = function (){
+      document.getElementById("password").onblur = function () {
+        console.log("动态调用onblur()");
+        alert(document.getElementById("password").valueOf())
+
+      }
+      document.getElementById("password").onchange = function () {
+        alert("密码发生了改变")
+      }
+    }
+  </script>
+</head>
+<body>
+      name: <input type="text" onblur="onblurfun()">
+      password:<input type="text" id="password">
+</body>
+</html>

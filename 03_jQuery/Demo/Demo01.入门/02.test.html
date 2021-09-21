@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery核心函数的测试</title>
+<!--  导入jQuery包-->
+<script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+  <script type="text/javascript">
+        $(function () {
+            $($("#btn001").click(function () {
+                alert("按钮1");
+            }))
+            $($(".btn003").click(function () {
+                alert("按钮三");
+            }))
+            $($("#btn002").click(function () {
+                alert($("button").length);
+            }))
+        })
+
+  </script>
+
+</head>
+<body>
+      <button id="btn001">按钮1</button>
+      <button id="btn002">按钮2</button>
+      <button class="btn003">按钮3</button>
+</body>
+</html>

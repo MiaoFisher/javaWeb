@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js arguments 隐形参数</title>
+    <script type="text/javascript">
+      // arguments的参数包括了在function括号里面的参数
+      // arguments参数可以让函数的形参不局限于定义的个数
+        var f1 = function (num1,num2){
+            var result = 0;
+            for (var i = 0 ; i<arguments.length;i++){
+              if ( typeof(arguments[i]) == "number"){
+                result+=arguments[i];
+              }
+            }
+            return result;
+        }
+        alert(f1(1,2,3,4,5,6,7,8,9))
+    </script>
+</head>
+<body>
+
+</body>
+</html>

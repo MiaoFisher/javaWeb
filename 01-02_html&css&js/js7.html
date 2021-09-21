@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>利用花括号进行自定义对象</title>
+  <script type="text/javascript">
+    var man={
+      name:"刘星",
+      age:15,
+      f1:function () {
+        alert("name = " + this.name)
+      },
+      f2:function (){
+        alert("age = " + this.age)
+      },
+      f3:function () {
+        this.f1();
+        this.f2();
+      }
+    }
+    man.f3();
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="user" class="com.spring01.User"></bean>
+    <!--        通过构造器的方法注入属性       -->
+    <!--    <bean id="book" class="com.spring01.Book">-->
+    <!--        <constructor-arg name="author" value="张三"></constructor-arg>-->
+    <!--        <constructor-arg name="name" value="仙剑3"></constructor-arg>-->
+    <!--    </bean>-->
+
+    <!--    通过set方法注入-->
+    <bean id="book" class="com.spring01.Book">
+        <property name="name" value="李四">
+            <!--            加入CDATA区域可以进行注入特殊符号-->
+        </property>
+        <property name="author">
+            <value><![CDATA[
+                    <<我的邻居长不大>>
+            ]]></value>
+        </property>
+    </bean>
+
+    <!--    用p注入的方式，在上面的配置文件增加一个p空间-->
+    <!--    <bean id="book" class="com.spring01.Book" p:author="张丹峰" p:name="我的邻居长不大"></bean>-->
+
+</beans>

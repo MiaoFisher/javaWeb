@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style rel="stylesheet" type="text/css">
+        /*类标签 的 格式是
+            #id 属性值{
+                key1:value1;
+                key2:value2;
+            }
+            值得注意的是:每一个id 在一个页面中只能只用一次
+            但是即便用了多次同一个id
+            某些页解析可以让id使用多次
+        */
+        #id1001{
+            border: 1px dashed brown;
+            color: yellow;
+            font-size: 20px;
+        }
+        #id1002{
+            border: 2px solid blue;
+            color: green;
+            font-size: 30px;
+        }
+
+        /*class选择器的使用方法*/
+        /*
+            .class属性{
+                key1:value1;
+                key2:value2;
+            }
+        */
+        /*我们可以使用组合选择器让多个选择器共享一个代码*/
+        .class001,#id1003{
+            border: 3px dashed purple;
+            color: red;
+            font-size: 35px;
+        }
+
+    </style>
+</head>
+<body>
+<!--    使用类标签进行修改-->
+    <div id="id1001">div标签1</div>
+    <div id="id1002">div标签2</div>
+    <div id="id1003">div标签3</div>
+    <span class="class001">span标签1</span>
+
+</body>
+</html>

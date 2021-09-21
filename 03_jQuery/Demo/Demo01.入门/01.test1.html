@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery练习1</title>
+  <script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+  <script type="text/javascript">
+    //先通过src导入jquery的jar包
+    $(function () {                   //$()这个相当于window.onload
+      var $btnObj = $("#btnId");       //$("btnId") => document.getElementById("btnId"),变量名前面加$以示区分
+        $btnObj.click(function () {
+        alert("通过jQuery绑定");
+      });
+    });
+
+    $(function () { // 表示页面加载完成 之后，相当 window.onload = function () {}
+        var $btnObj = $("#but1"); // 表示按id查询标签对象
+        $btnObj.click(function () { // 绑定单击事件
+            alert("jQuery 的单击事件");
+        });
+    });
+  </script>
+</head>
+<body>
+      <button id="but1">按钮1</button>
+      <button id="btnId">按钮2</button>
+</body>
+</html>

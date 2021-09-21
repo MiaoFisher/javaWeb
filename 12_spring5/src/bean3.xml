@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--1.采用内部赋值的方式(类似于匿名内部类的方式)-->
+    <!--    <bean id="emp" class="com.spring01.bean.Emp">-->
+    <!--        <property name="id" value="15"></property>-->
+    <!--        <property name="name" value="张三"></property>-->
+    <!--        <property name="dept">-->
+    <!--            <bean class="com.spring01.bean.Dept">-->
+    <!--                <property name="name" value="安保部"></property>-->
+    <!--            </bean>-->
+    <!--        </property>-->
+    <!--        </bean>-->
+
+    <!-- 2.采用级联赋值的方式-->
+    <!--    <bean id="emp" class="com.spring01.bean.Emp">-->
+    <!--        <property name="name" value="李四"/>-->
+    <!--        <property name="id" value="16"/>-->
+    <!--        <property name="dept" ref="dept"/>-->
+    <!--    </bean>-->
+    <!--    <bean id="dept" class="com.spring01.bean.Dept">-->
+    <!--        <property name="name" value="卫生部"/>-->
+    <!--    </bean>-->
+    <!--    3.通过直接给bean中的属性直接赋值的方法-->
+    <bean id="emp" class="com.spring01.bean.Emp">
+        <property name="name" value="王五"/>
+        <property name="id" value="18"/>
+        <property name="dept" ref="dept"/>
+        <property name="dept.name" value="财务部"/>
+    </bean>
+    <bean id="dept" class="com.spring01.bean.Dept">
+        <property name="name" value="卫生部"/>
+    </bean>
+</beans>
